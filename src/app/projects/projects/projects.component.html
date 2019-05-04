@@ -1,0 +1,15 @@
+<p>
+    Esta es la lista de proyectos:
+</p>
+<pre>{{projects|json}}</pre>
+<ul *ngIf="projects.length > 0; else empty">
+    <li *ngFor="let project of projects">
+        <span>{{project.name}}</span>
+        <a class="button" [routerLink]="['/projects', project.id]">Ver</a>
+        <input value="Borrar" type="button" (click)="borrarProjecto(project)">
+
+    </li>
+</ul>
+<ng-template #empty>No hay proyectos</ng-template>
+
+<a class="button" routerLink="/projects/new">Añadir nuevo proyecto</a>

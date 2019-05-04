@@ -1,0 +1,15 @@
+<p>
+  Añadir nuevo proyecto al listado:
+</p>
+<form>
+<fieldset>
+  <legend>Formulario para crear proyecto</legend>
+  <section>
+    <label for="name"></label>
+    <input id="name" name="name" type="text" [(ngModel)]="project.name"
+           placeholder="Nombre">
+  </section>
+  <input type="submit" value="Guardar" (click)="guardarProjecto()">
+
+</fieldset>
+</form>
